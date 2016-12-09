@@ -34,7 +34,7 @@ class virtualMachine(machines.virtualMachine):
 
 	def initInterfaces(self):
 		if self.providedInterface: self.fabnet = self.providedInterface		#providedInterface is defined in the virtualMachine class.
-		else: self.fabnet = interfaces.gestaltInterface('FABNET', interfaces.serialInterface(baudRate = 115200, interfaceType = 'ftdi', portName = '/dev/cu.usbserial-FTZ569NT'))
+		else: self.fabnet = interfaces.gestaltInterface('FABNET', interfaces.serialInterface(baudRate = 115200, interfaceType = 'ftdi', portName = '/dev/ttyUSB0'))
 
 	def initControllers(self):
 		print "init controllers, x, y and z"
